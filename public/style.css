@@ -1,0 +1,82 @@
+* { box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #1a1a2e;
+  color: #eaeaea;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+
+.stats {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #9a9ab0;
+}
+
+.stats span {
+  color: #eaeaea;
+  font-weight: bold;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: repeat(4, 80px);
+  gap: 10px;
+}
+
+.card {
+  background: #262640;
+  border: none;
+  border-radius: 8px;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: transparent;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.card:hover:not(.flipped):not(.matched) {
+  background: #34345a;
+}
+
+.card.flipped,
+.card.matched {
+  background: #0f0f1a;
+  color: #eaeaea;
+}
+
+.card.matched {
+  opacity: 0.5;
+}
+
+button.reset {
+  margin-top: 24px;
+  background: #4fd1c5;
+  border: none;
+  color: #0f0f1a;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button.reset:hover {
+  background: #3bb8ac;
+}
